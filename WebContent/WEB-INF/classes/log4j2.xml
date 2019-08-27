@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+  <appenders>
+    
+     <Console name="ConsoleJSONAppender" target="SYSTEM_OUT">
+        <JsonLayout complete="false" compact="true" eventEol="true">
+            <KeyValuePair key="myCustomField" value="myCustomValue" />
+        </JsonLayout>
+    </Console>
+
+    <File name="MyFile" fileName="logs/app.log" immediateFlush="true">
+        <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>  
+
+  </appenders>
+  <loggers>
+
+    <logger name="filelogger" level="error">
+        <appender-ref ref="MyFile"/>
+    </logger>
+<Logger name="CONSOLE_JSON_APPENDER" level="TRACE" additivity="false">
+    <AppenderRef ref="ConsoleJSONAppender" />
+</Logger>
+    <root level="info">
+      <appender-ref ref="Console"/>
+    </root>
+  </loggers>
+</configuration>
