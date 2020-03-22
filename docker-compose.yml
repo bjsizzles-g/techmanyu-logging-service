@@ -3,10 +3,10 @@
 version: '3.1'
 services:
   
-  Balaji-logging-service:
+  balaji-logging-service:
     build: ./
-    container_name: "Balaji-logging-service"
-    hostname: "Balaji-logging-service"
+    container_name: "balaji-logging-service"
+    hostname: "balaji-logging-service"
     ports:
       - "8080:8080"
     logging:
