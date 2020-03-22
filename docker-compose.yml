@@ -3,10 +3,10 @@
 version: '3.1'
 services:
   
-  techmanyu-logging-service:
+  Balaji-logging-service:
     build: ./
-    container_name: "techmanyu-logging-service"
-    hostname: "techmanyu-logging-service"
+    container_name: "Balaji-logging-service"
+    hostname: "Balaji-logging-service"
     ports:
       - "8080:8080"
     logging:

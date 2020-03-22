@@ -1,4 +1,4 @@
-package techmanyu.logging.servlet;
+package Balaji.logging.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -20,10 +20,10 @@ public class TestLog4jServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
-		LOGGER.info("This is a logging statement from techmanyu-logging-service");
+		LOGGER.info("This is a logging statement from Balaji-logging-service");
 		//logger.debug("Debug message");
 		
-		String html = "<html><h2>Techmanyu-Logging-Service - Hello World!</h2></html>";
+		String html = "<html><h2>Balaji-Logging-Service - Hello World!</h2></html>";
 		response.getWriter().println(html);
 	}
 
